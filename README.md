@@ -7,6 +7,6 @@
 - [ ] Layout system
 - [ ] Plugin system
 - [ ] Vuex & Automatic store generation
-- [ ] Metadata
 - [ ] HTTP Production server (easier deployments)
+- [ ] Metadata
 - [ ] SSR ??
