@@ -1,8 +1,8 @@
 {
-  "name": "vuejsframework",
-  "version": "1.0.0",
-  "main": "./src/index.js",
-  "repository": "git@github.com:frederic2ec/vuejsframework.git",
+  "name": "dunejs",
+  "version": "0.0.1",
+  "main": "./src/cli/index.js",
+  "repository": "git@github.com:frederic2ec/dunejs.git",
   "author": "frederic2ec <freddy.cho@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -13,12 +13,14 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
+    "caporal": "^1.3.0",
+    "consola": "^2.11.3",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4",
     "vue-route-generator": "^0.4.3",
     "vue-router": "^3.1.6"
   },
   "bin": {
-    "vuejs-framework": "./src/index.js"
+    "dune": "./src/cli/index.js"
   }
 }

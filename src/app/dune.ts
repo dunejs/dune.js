@@ -2,6 +2,8 @@ import Vue from "vue";
 import App from "./app.vue";
 import { createRouter } from "../router";
 
+import "../layouts";
+
 export function createApp() {
   const router = createRouter();
 
