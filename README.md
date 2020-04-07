@@ -6,6 +6,7 @@
 
 - [x] Automatic routes generation
 - [x] Layout system
+- [x] Middlewares
 - [ ] Plugin system
 - [ ] Vuex & Automatic store generation
 - [ ] HTTP Production server (easier deployments)
