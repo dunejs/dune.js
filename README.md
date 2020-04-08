@@ -9,8 +9,10 @@
 - [x] Automatic routes generation
 - [x] Layout system
 - [ ] Middlewares
-- [ ] Plugin system
+- [x] Plugin system
 - [ ] Vuex & Automatic store generation
 - [x] HTTP Production server (easier deployments)
-- [ ] Metadata
+- [x] Metadata
+- [x] CSS import
+- [x] Files watcher
 - [ ] SSR ??

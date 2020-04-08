@@ -1,6 +1,11 @@
 import Vue from "vue";
 import App from "./app.vue";
+
 import { createRouter } from "./router";
+import "./meta";
+
+import "../../../../.generated/css";
+import "../../../../.generated/plugins";
 
 export function createApp() {
   const router = createRouter();
