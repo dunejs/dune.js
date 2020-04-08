@@ -2,7 +2,7 @@
 const prog = require("caporal");
 var pjson = require("../../package.json");
 
-const watchCmd = require(".//watch");
+const watchCmd = require("./watch");
 prog
   .version(pjson.version)
   .command("watch", "Start the development server !")

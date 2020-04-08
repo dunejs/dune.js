@@ -5,32 +5,29 @@ const glob = require("glob");
 
 module.exports = function layoutsImporter(appFolder) {
   const layoutsFolder = Path.join(process.cwd(), appFolder, "/layouts/");
-  const layoutsFolderPrefix = Path.join("../../../../", appFolder, "/layouts/");
-  const layoutsFile = Path.join(__dirname, "../layouts/");
+  const layoutsFolderPrefix = Path.join("../", appFolder, "/layouts/");
+  const layoutsFile = Path.join(process.cwd(), ".generated/layouts.ts");
 
-  if (!fs.existsSync(layoutsFile)) {
-    fs.mkdirSync(layoutsFile, 0744);
-  }
+  fs.closeSync(fs.openSync(layoutsFile, "w"));
 
-  fs.closeSync(fs.openSync(layoutsFile + "index.ts", "w"));
-
-  const stream = fs.createWriteStream(layoutsFile + "index.ts");
+  const stream = fs.createWriteStream(layoutsFile);
 
   stream.once("open", function (fd) {
-    stream.write("import Vue from 'vue';\n");
+    stream.write("export default {\n");
     glob(layoutsFolder + "*.vue", {}, (err, files) => {
       files.forEach((file) => {
         fileName = Path.basename(file, ".vue");
 
         stream.write(
-          "Vue.component('" +
+          "'" +
             fileName +
-            "-layout', require('" +
+            "-layout': () => import('" +
             layoutsFolderPrefix +
             fileName +
-            ".vue').default)\n"
+            ".vue'))\n"
         );
       });
+      stream.write("}");
       stream.end();
     });
   });

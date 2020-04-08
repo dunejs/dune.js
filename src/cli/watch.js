@@ -4,10 +4,12 @@ const Path = require("path");
 
 const routesGenerator = require("./routesGenerator");
 const layoutsImporter = require("./layoutsImporter");
+const generateFolder = require("./generateFolder");
 
 const entryFiles = Path.join(__dirname, "../app/index.pug");
 
 module.exports = async function watchCmd(args) {
+  generateFolder();
   routesGenerator(args.src);
   layoutsImporter(args.src);
 

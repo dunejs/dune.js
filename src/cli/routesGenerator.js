@@ -6,8 +6,8 @@ const { generateRoutes } = require("vue-route-generator");
 
 module.exports = function routesGenerator(appFolder) {
   const pagesFolder = Path.join(process.cwd(), appFolder, "/pages/");
-  const pagesFolderPrefix = Path.join("../../../../", appFolder, "/pages/");
-  const routesFile = Path.join(__dirname, "../router/routes.ts");
+  const pagesFolderPrefix = Path.join("../", appFolder, "/pages/");
+  const routesFile = Path.join(process.cwd(), ".generated/routes.ts");
 
   // Generate routes
   const routes = generateRoutes({
