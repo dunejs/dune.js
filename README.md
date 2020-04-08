@@ -8,7 +8,7 @@
 
 - [x] Automatic routes generation
 - [x] Layout system
-- [] Middlewares
+- [ ] Middlewares
 - [ ] Plugin system
 - [ ] Vuex & Automatic store generation
 - [x] HTTP Production server (easier deployments)
