@@ -6,9 +6,7 @@ import routes from "../../../../.generated/routes";
 
 Vue.use(Router);
 
-export function createRouter() {
-  return new Router({
-    mode: "history",
-    routes,
-  });
-}
+export const router = new Router({
+  mode: "history",
+  routes
+});

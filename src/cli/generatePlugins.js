@@ -3,7 +3,7 @@ const Path = require("path");
 const consola = require("consola");
 
 module.exports = function generatePlugins(appFolder) {
-  const pluginsFile = Path.join(process.cwd(), ".generated/plugins.ts");
+  const pluginsFile = Path.join(process.cwd(), ".generated/plugins.js");
 
   const config = require("../../../../.generated/config").plugins;
 
@@ -11,8 +11,8 @@ module.exports = function generatePlugins(appFolder) {
 
   const stream = fs.createWriteStream(pluginsFile);
 
-  stream.once("open", function (fd) {
-    config.forEach((file) => {
+  stream.once("open", function(fd) {
+    config.forEach(file => {
       if (file.startsWith(".")) {
         file = Path.join("../", appFolder, file);
       }

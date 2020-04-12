@@ -1,20 +1,18 @@
-<template lang="pug">
-  component(:is="layout")
-    router-view
+<template>
+  <component :is="layout">
+    <router-view></router-view>
+  </component>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script>
 import config from "../../../../.generated/config";
-import layouts from "../../../../.generated/layouts";
 
-export default Vue.extend({
+export default {
   head: config.head,
-  components: layouts,
   computed: {
     layout() {
       return (this.$route.meta.layout || "default") + "-layout";
-    },
-  },
-});
+    }
+  }
+};
 </script>

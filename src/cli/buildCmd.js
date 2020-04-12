@@ -4,13 +4,13 @@ const Path = require("path");
 
 const generate = require("./generate");
 
-const entryFiles = Path.join(__dirname, "../app/index.pug");
+const entryFiles = Path.join(__dirname, "../app/index.html");
 
 module.exports = async function buildCmd(args) {
   generate(args);
 
   const options = {
-    sourceMaps: false,
+    sourceMaps: false
   };
 
   const bundler = new Bundler(entryFiles, options);
