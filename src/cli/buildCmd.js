@@ -10,7 +10,8 @@ module.exports = async function buildCmd(options) {
   generate(options);
 
   const bundlerOptions = {
-    sourceMaps: false
+    sourceMaps: false,
+    hmr: false
   };
 
   const bundler = new Bundler(entryFiles, bundlerOptions);
