@@ -9,17 +9,17 @@ const startCmd = require("./startCmd");
 prog
   .version(pjson.version)
   .command("watch", "Start the development server !")
-  .argument("<src>", "Source folder where the app sit.")
-  .action(function (args, options, logger) {
-    watchCmd(args);
+  .option("--config <config>", "Config file path (optional).")
+  .action(function(args, options, logger) {
+    watchCmd(options);
   })
   .command("build", "Build the website !")
-  .argument("<src>", "Source folder where the app sit.")
-  .action(function (args, options, logger) {
-    buildCmd(args);
+  .option("--config <config>", "Config file path (optional).")
+  .action(function(args, options, logger) {
+    buildCmd(options);
   })
   .command("start", "Start a web server !")
-  .action(function () {
+  .action(function() {
     startCmd();
   });
 

@@ -1,25 +1,32 @@
 const fs = require("fs");
 const Path = require("path");
-const consola = require("consola");
 const glob = require("glob");
 
-module.exports = function layoutsImporter(appFolder) {
-  const layoutsFolder = Path.join(process.cwd(), appFolder, "/layouts/");
-  const layoutsFolderPrefix = Path.join("../", appFolder, "/layouts/");
-  const layoutsFile = Path.join(process.cwd(), ".generated/layouts.js");
+module.exports = function generateLayouts(options, generatorBar) {
+  const configPath = options.config || "./";
+  const config = require(Path.join(
+    process.cwd(),
+    configPath,
+    "./dune.config.js"
+  ));
+  const srcDir = config.srcDir || options.config || "./";
+
+  const layoutsFolder = Path.join(process.cwd(), srcDir, "/layouts/");
+  const layoutsFolderPrefix = Path.join("../", srcDir, "/layouts/");
+  const layoutsFile = Path.join(process.cwd(), ".dunejs/layouts.js");
 
   fs.closeSync(fs.openSync(layoutsFile, "w"));
 
   const stream = fs.createWriteStream(layoutsFile);
 
   stream.once("open", function(fd) {
-    stream.write("export default app => {\n");
+    stream.write("export default Vue => {\n");
     glob(layoutsFolder + "*.vue", {}, (err, files) => {
       files.forEach(file => {
         fileName = Path.basename(file, ".vue");
 
         stream.write(
-          "app.component('" +
+          "Vue.component('" +
             fileName +
             "-layout', require('" +
             layoutsFolderPrefix +
@@ -32,5 +39,5 @@ module.exports = function layoutsImporter(appFolder) {
     });
   });
 
-  consola.info("Layouts imported !");
+  generatorBar.increment();
 };

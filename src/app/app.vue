@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import config from "../../../../.generated/config";
+import config from "../../../../.dunejs/config";
 
 export default {
   head: config.head,

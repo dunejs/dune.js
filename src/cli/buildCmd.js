@@ -2,18 +2,18 @@ const Bundler = require("parcel-bundler");
 const consola = require("consola");
 const Path = require("path");
 
-const generate = require("./generate");
+const generate = require("./generator/index");
 
 const entryFiles = Path.join(__dirname, "../app/index.html");
 
-module.exports = async function buildCmd(args) {
-  generate(args);
+module.exports = async function buildCmd(options) {
+  generate(options);
 
-  const options = {
+  const bundlerOptions = {
     sourceMaps: false
   };
 
-  const bundler = new Bundler(entryFiles, options);
+  const bundler = new Bundler(entryFiles, bundlerOptions);
 
   bundler.on("buildStart", () => {
     consola.info("Build started !");
