@@ -29,4 +29,6 @@ const appOptions = {
 };
 
 const customApp = config.options || {};
+
+/* eslint-disable no-new */
 new Vue({ ...appOptions, ...customApp });

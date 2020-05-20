@@ -23,7 +23,7 @@ module.exports = function generateLayouts(options, generatorBar) {
     stream.write("export default Vue => {\n");
     glob(layoutsFolder + "*.vue", {}, (err, files) => {
       files.forEach(file => {
-        fileName = Path.basename(file, ".vue");
+        const fileName = Path.basename(file, ".vue");
 
         stream.write(
           "Vue.component('" +

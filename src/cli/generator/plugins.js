@@ -27,7 +27,7 @@ module.exports = function generatePlugins(options, generatorBar) {
     });
     stream.write("export default Vue => {\n");
     plugins.forEach(file => {
-      fileName = Path.basename(file, ".js");
+      const fileName = Path.basename(file, ".js");
 
       stream.write(fileName + "(Vue)\n");
     });
