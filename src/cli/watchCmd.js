@@ -9,7 +9,7 @@ const entryFiles = Path.join(__dirname, "../app/index.html");
 
 module.exports = async function watchCmd(options) {
   generate(options);
-  filesWatcher(options);
+  //filesWatcher(options);
 
   const bundler = new Bundler(entryFiles);
 
