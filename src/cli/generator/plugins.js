@@ -16,7 +16,7 @@ module.exports = function generatePlugins(options, generatorBar) {
 
   const stream = fs.createWriteStream(pluginsFile);
 
-  stream.once("open", function(fd) {
+  stream.once("open", function (fd) {
     plugins.forEach(file => {
       if (file.startsWith(".")) {
         file = Path.join("../", srcDir, file);
@@ -36,4 +36,4 @@ module.exports = function generatePlugins(options, generatorBar) {
   });
 
   generatorBar.increment();
-};
+}

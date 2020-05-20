@@ -19,7 +19,7 @@ module.exports = function generateLayouts(options, generatorBar) {
 
   const stream = fs.createWriteStream(layoutsFile);
 
-  stream.once("open", function(fd) {
+  stream.once("open", function (fd) {
     stream.write("export default Vue => {\n");
     glob(layoutsFolder + "*.vue", {}, (err, files) => {
       files.forEach(file => {
@@ -27,11 +27,11 @@ module.exports = function generateLayouts(options, generatorBar) {
 
         stream.write(
           "Vue.component('" +
-            fileName +
-            "-layout', require('" +
-            layoutsFolderPrefix +
-            fileName +
-            ".vue').default);\n"
+          fileName +
+          "-layout', require('" +
+          layoutsFolderPrefix +
+          fileName +
+          ".vue').default);\n"
         );
       });
       stream.write("};");
@@ -39,5 +39,7 @@ module.exports = function generateLayouts(options, generatorBar) {
     });
   });
 
-  generatorBar.increment();
+  if (generatorBar != null) {
+    generatorBar.increment();
+  }
 };

@@ -6,7 +6,8 @@ module.exports = function generateFolder(generatorBar) {
   const generatedFolder = Path.join(process.cwd(), ".dunejs/");
 
   if (!fs.existsSync(generatedFolder)) {
-    fs.mkdirSync(generatedFolder, { recursive: true });
+    fs.mkdirSync(generatedFolder, { recursive: true })
   }
+
   generatorBar.increment();
 };

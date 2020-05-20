@@ -23,5 +23,7 @@ module.exports = function generateRouter(options, generatorBar) {
   });
   fs.writeFileSync(routesFile, routes);
 
-  generatorBar.increment();
+  if (generatorBar != null) {
+    generatorBar.increment();
+  }
 };

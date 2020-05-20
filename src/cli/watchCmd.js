@@ -3,13 +3,13 @@ const consola = require("consola");
 const Path = require("path");
 
 const generate = require("./generator/index");
-const filesWatcher = require("./filesWatcher");
+const watcher = require("./watcher/index");
 
 const entryFiles = Path.join(__dirname, "../app/index.html");
 
 module.exports = async function watchCmd(options) {
   generate(options);
-  //filesWatcher(options);
+  watcher(options);
 
   const bundler = new Bundler(entryFiles);
 

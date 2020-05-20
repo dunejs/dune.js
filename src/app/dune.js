@@ -8,6 +8,7 @@ import App from "./app.vue";
 
 // Module import
 import { router } from "./router";
+import { store } from "./vuex"
 import layouts from "../../../../.dunejs/layouts";
 import plugins from "../../../../.dunejs/plugins";
 import meta from "./meta";
@@ -25,6 +26,7 @@ plugins(Vue);
 const appOptions = {
   el: "#app",
   router,
+  store,
   render: h => h(App)
 };
 

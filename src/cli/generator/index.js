@@ -20,7 +20,7 @@ module.exports = function generate(options) {
     hideCursor: true
   });
 
-  generatorBar.start(7, 0);
+  generatorBar.start(6, 0);
 
   generateFolder(generatorBar);
   generateConfig(options, generatorBar);
@@ -28,7 +28,6 @@ module.exports = function generate(options) {
   generateLayouts(options, generatorBar);
   generateCss(options, generatorBar);
   generatePlugins(options, generatorBar);
-
   generatorBar.stop();
   consola.success("Generation completed !");
 };

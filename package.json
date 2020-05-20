@@ -26,7 +26,8 @@
     "vue-hot-reload-api": "^2.3.4",
     "vue-meta": "^2.3.3",
     "vue-route-generator": "^0.4.3",
-    "vue-router": "^3.1.6"
+    "vue-router": "^3.1.6",
+    "vuex": "^3.4.0"
   },
   "bin": {
     "dune": "./src/cli/index.js"
