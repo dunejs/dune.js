@@ -8,12 +8,12 @@ Vue.use(Router);
 
 export const router = new Router({
   mode: "history",
-  routes
+  routes,
 });
 
 router.beforeEach((to, from, next) => {
   if (!to.matched.length) {
-    next('/404');
+    next("/404");
   } else {
     next();
   }

@@ -19,11 +19,11 @@ module.exports = function generateRouter(options, generatorBar) {
   // Generate routes
   const routes = generateRoutes({
     pages: pagesFolder,
-    importPrefix: pagesFolderPrefix
+    importPrefix: pagesFolderPrefix,
   });
   fs.writeFileSync(routesFile, routes);
 
-  if (generatorBar != null) {
+  if (generatorBar !== null) {
     generatorBar.increment();
   }
 };

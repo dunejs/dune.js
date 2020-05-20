@@ -1,7 +1,7 @@
 import VueMeta from "vue-meta";
 
-export default Vue => {
+export default (Vue) => {
   Vue.use(VueMeta, {
-    keyName: "head"
+    keyName: "head",
   });
 };

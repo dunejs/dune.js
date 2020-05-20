@@ -18,7 +18,7 @@ module.exports = function generate(options) {
       "| {percentage}% || {value}/{total}",
     barCompleteChar: "\u2588",
     barIncompleteChar: "\u2591",
-    hideCursor: true
+    hideCursor: true,
   });
 
   generatorBar.start(7, 0);

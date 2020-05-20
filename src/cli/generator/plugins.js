@@ -16,8 +16,8 @@ module.exports = function generatePlugins(options, generatorBar) {
 
   const stream = fs.createWriteStream(pluginsFile);
 
-  stream.once("open", function (fd) {
-    plugins.forEach(file => {
+  stream.once("open", function(fd) {
+    plugins.forEach((file) => {
       if (file.startsWith(".")) {
         file = Path.join("../", srcDir, file);
       }
@@ -26,7 +26,7 @@ module.exports = function generatePlugins(options, generatorBar) {
       );
     });
     stream.write("export default Vue => {\n");
-    plugins.forEach(file => {
+    plugins.forEach((file) => {
       const fileName = Path.basename(file, ".js");
 
       stream.write(fileName + "(Vue)\n");
@@ -36,4 +36,4 @@ module.exports = function generatePlugins(options, generatorBar) {
   });
 
   generatorBar.increment();
-}
+};

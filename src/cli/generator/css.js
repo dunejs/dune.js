@@ -17,8 +17,8 @@ module.exports = function generateCss(options, generatorBar) {
 
   const stream = fs.createWriteStream(cssFile);
 
-  stream.once("open", function (fd) {
-    css.forEach(file => {
+  stream.once("open", function(fd) {
+    css.forEach((file) => {
       if (file.startsWith(".")) {
         file = Path.join("../", srcDir, file);
       }
