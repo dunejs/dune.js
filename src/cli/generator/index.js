@@ -8,6 +8,7 @@ const generatePlugins = require("./plugins");
 const generateRoutes = require("./routes");
 const generateLayouts = require("./layouts");
 const generateCss = require("./css");
+const generateStores = require("./stores");
 
 module.exports = function generate(options) {
   const generatorBar = new cliProgress.SingleBar({
@@ -20,7 +21,7 @@ module.exports = function generate(options) {
     hideCursor: true
   });
 
-  generatorBar.start(6, 0);
+  generatorBar.start(7, 0);
 
   generateFolder(generatorBar);
   generateConfig(options, generatorBar);
@@ -28,6 +29,7 @@ module.exports = function generate(options) {
   generateLayouts(options, generatorBar);
   generateCss(options, generatorBar);
   generatePlugins(options, generatorBar);
+  generateStores(options, generatorBar);
   generatorBar.stop();
   consola.success("Generation completed !");
 };

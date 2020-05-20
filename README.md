@@ -12,8 +12,5 @@
 - [x] Metadata
 - [x] CSS import
 - [x] Files watcher
+- [x] Vuex & Automatic store generation
 - [x] HTTP Production server (easier deployments)
-
-- [ ] Middlewares
-- [ ] Vuex & Automatic store generation
-- [ ] SSR ??
