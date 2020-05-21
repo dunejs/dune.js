@@ -1,6 +1,6 @@
 {
   "name": "dunejs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./src/cli/index.js",
   "repository": "git@github.com:frederic2ec/dunejs.git",
   "author": "frederic2ec <freddy.cho@hotmail.com>",
