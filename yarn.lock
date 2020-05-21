@@ -6020,7 +6020,7 @@ vue-route-generator@^0.4.3:
     fast-glob "^3.0.4"
     prettier "1.19.1"
 
-vue-router@^3.1.6:
+vue-router@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.2.0.tgz#da35195ffe37fdf0bec9f5f8f72781d2a7718815"
   integrity sha512-khkrcUIzMcI1rDcNtqkvLwfRFzB97GmJEsPAQdj7t/VvpGhmXLOkUfhc+Ah8CvpSXGXwuWuQO+x8Sy/xDhXZIA==
