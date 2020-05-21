@@ -32,7 +32,13 @@
   "bin": {
     "dune": "./src/cli/index.js"
   },
+  "bundledDependencies": [
+    "vue"
+  ],
   "alias": {
     "vue": "./node_modules/vue/dist/vue.esm.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
