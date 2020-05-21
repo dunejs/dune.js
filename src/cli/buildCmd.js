@@ -11,7 +11,7 @@ module.exports = async function buildCmd(options) {
 
   const bundlerOptions = {
     sourceMaps: false,
-    hmr: false
+    hmr: false,
   };
 
   const bundler = new Bundler(entryFiles, bundlerOptions);
@@ -21,6 +21,7 @@ module.exports = async function buildCmd(options) {
   });
   bundler.on("buildEnd", () => {
     consola.success("Build success !");
+    process.exit();
   });
 
   await bundler.bundle();
