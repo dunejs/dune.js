@@ -4,6 +4,11 @@
 
 [Proof of concept] Easy to use [VueJS](https://vuejs.org/) framework using [Parcel.JS](https://parceljs.org/), focused on making development faster, easier by removing basic configuration !
 
+## Demo
+
+[Site](https://dunejs-test-app.now.sh/)
+[Source Code](https://github.com/frederic2ec/dunejs-test-app)
+
 ## Task list | TODO
 
 - [x] Automatic routes generation
