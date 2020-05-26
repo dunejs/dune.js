@@ -5,14 +5,12 @@
   "repository": "git@github.com:frederic2ec/dunejs.git",
   "author": "frederic2ec <freddy.cho@hotmail.com>",
   "license": "MIT",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@vue/component-compiler-utils": "^3.1.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "dependencies": {
     "caporal": "^1.3.0",
     "chalk": "^4.0.0",
     "chokidar": "^3.3.1",
@@ -27,6 +25,7 @@
     "vue-meta": "^2.3.3",
     "vue-route-generator": "^0.4.3",
     "vue-router": "^3.1.6",
+    "vue-template-compiler": "^2.6.11",
     "vuex": "^3.4.0"
   },
   "bin": {
