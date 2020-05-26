@@ -1,6 +1,7 @@
 // Babel
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import "@babel/polyfill";
 
 // App import
 import Vue from "vue";
