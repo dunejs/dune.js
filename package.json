@@ -23,7 +23,7 @@
     "regenerator-runtime": "^0.13.5",
     "vue": "^2.6.11",
     "vue-hot-reload-api": "^2.3.4",
-    "vue-meta": "^2.3.3",
+    "vue-meta": "^2.4.0",
     "vue-route-generator": "^0.4.3",
     "vue-router": "^3.1.6",
     "vue-template-compiler": "^2.6.11",
