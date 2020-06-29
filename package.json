@@ -16,7 +16,7 @@
     "chalk": "^4.0.0",
     "chokidar": "^3.3.1",
     "cli-progress": "^3.8.2",
-    "consola": "^2.11.3",
+    "consola": "^2.14.0",
     "core-js": "3",
     "express": "^4.17.1",
     "parcel-bundler": "^1.12.4",
