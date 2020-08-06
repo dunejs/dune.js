@@ -25,7 +25,7 @@
     "vue-hot-reload-api": "^2.3.4",
     "vue-meta": "^2.3.3",
     "vue-route-generator": "^0.4.3",
-    "vue-router": "^3.1.6",
+    "vue-router": "^3.4.1",
     "vue-template-compiler": "^2.6.11",
     "vuex": "^3.4.0"
   },
