@@ -1,0 +1,23 @@
+{
+  "name": "@dunejs/app",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "frederic2ec <freddy.cho@hotmail.com>",
+  "homepage": "https://github.com/dunejs/dune.js#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunejs/dune.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dunejs/dune.js/issues"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.12",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-meta": "^2.4.0",
+    "vue-router": "^3.4.3",
+    "vuex": "^3.5.1"
+  }
+}

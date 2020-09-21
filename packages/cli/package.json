@@ -1,0 +1,37 @@
+{
+  "name": "@dunejs/cli",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "frederic2ec <freddy.cho@hotmail.com>",
+  "homepage": "https://github.com/dunejs/dune.js#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunejs/dune.js.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch"
+  },
+  "bin": {
+    "dune": "./dist/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/dunejs/dune.js/issues"
+  },
+  "dependencies": {
+    "@dunejs/app": "file:../app",
+    "caporal": "^1.4.0",
+    "chalk": "^4.1.0",
+    "chokidar": "^3.4.2",
+    "cli-progress": "^3.8.2",
+    "consola": "^2.15.0",
+    "express": "^4.17.1",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.3",
+    "vue-route-generator": "^0.4.3",
+    "vue-template-compiler": "^2.6.12"
+  }
+}
