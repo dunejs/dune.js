@@ -33,7 +33,7 @@ export default function(options: object | any, generatorBar: SingleBar | null) {
             "-layout', require('" +
             layoutsFolderPrefix +
             fileName +
-            ".vue').default);\n"
+            ".vue'));\n"
         );
       });
       stream.write("};");

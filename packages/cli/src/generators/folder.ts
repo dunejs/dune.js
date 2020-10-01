@@ -3,8 +3,8 @@ import * as Path from "path";
 
 import { SingleBar } from "cli-progress";
 
-export default function (generatorBar: SingleBar) {
-  const generatedFolder = Path.join(process.cwd(), ".dunejs/");
+export default function(generatorBar: SingleBar) {
+  const generatedFolder = Path.join(process.cwd(), ".dunejs/app");
 
   if (!fs.existsSync(generatedFolder)) {
     fs.mkdirSync(generatedFolder, { recursive: true });

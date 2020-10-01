@@ -1,3 +1,5 @@
+const Vuetify = require("vuetify");
+
 module.exports = {
   head: {
     title: "DuneJS",
@@ -27,6 +29,8 @@ module.exports = {
     ],
   },
   css: [],
-  plugins: [],
-  options: {},
+  plugins: ["./plugins/vuetify.js"],
+  options: {
+    vuetify: new Vuetify(),
+  },
 };

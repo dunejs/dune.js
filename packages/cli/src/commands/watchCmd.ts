@@ -1,12 +1,13 @@
 import * as Bundler from "parcel-bundler";
 const consola = require("consola");
+import * as Path from "path";
 
 import generate from "../generators/index";
 import watcher from "../watchers/index";
 
-const entryFiles = require.resolve("@dunejs/app/src/index.html");
+const entryFiles = Path.join(process.cwd(), ".dunejs/app/index.html");
 
-export default async function (options: object) {
+export default async function(options: object) {
   generate(options);
   watcher(options);
 

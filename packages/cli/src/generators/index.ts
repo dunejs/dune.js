@@ -9,8 +9,9 @@ import generateRoutes from "./routes";
 import generateLayouts from "./layouts";
 import generateCss from "./css";
 import generateStores from "./stores";
+import generateApp from "./app";
 
-export default function (options: object) {
+export default function(options: object) {
   const generatorBar = new cliProgress.SingleBar({
     format:
       "Generation in progress... |" +
@@ -21,9 +22,10 @@ export default function (options: object) {
     hideCursor: true,
   });
 
-  generatorBar.start(7, 0);
+  generatorBar.start(8, 0);
 
   generateFolder(generatorBar);
+  generateApp(generatorBar);
   generateConfig(options, generatorBar);
   generateRoutes(options, generatorBar);
   generateLayouts(options, generatorBar);

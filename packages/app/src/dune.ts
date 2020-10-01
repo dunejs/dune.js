@@ -2,19 +2,19 @@
 import "core-js/stable";
 
 // App import
-import Vue from "vue/dist/vue.esm.js";
+import Vue from "vue";
 import App from "./app.vue";
 
 // Module import
 import { router } from "./router";
 import { store } from "./vuex";
-import layouts from "../../.dunejs/layouts";
-import plugins from "../../.dunejs/plugins";
+import layouts from "../layouts";
+import plugins from "../plugins";
 import meta from "./meta";
 
-import config from "../../.dunejs/config";
+import config from "../config";
 
-import "../../.dunejs/css";
+import "../css";
 
 // Register module correctly
 layouts(Vue);

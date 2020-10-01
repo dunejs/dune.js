@@ -1,8 +1,9 @@
 import * as Bundler from "parcel-bundler";
 const consola = require("consola");
 import generate from "../generators/index";
+import * as Path from "path";
 
-const entryFiles = require.resolve("@dunejs/app/src/index.html");
+const entryFiles = Path.join(process.cwd(), ".dunejs/app/index.html");
 
 export default async function(options: object) {
   generate(options);
