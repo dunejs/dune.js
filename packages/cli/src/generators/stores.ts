@@ -26,12 +26,10 @@ export default function(options: object | any, generatorBar: SingleBar | any) {
       files.forEach((file) => {
         const fileName = Path.basename(file);
         stream.write(
-          "import " +
-            Path.basename(file, ".js") +
-            " from '" +
-            storesFolderPrefix +
-            fileName +
-            "'\n"
+          `import ${Path.basename(
+            file,
+            ".js"
+          )} from '${storesFolderPrefix}${fileName}'\n`
         );
       });
       stream.write("export default {\n");
@@ -39,7 +37,7 @@ export default function(options: object | any, generatorBar: SingleBar | any) {
         files.forEach((file) => {
           const fileName = Path.basename(file, ".js");
 
-          stream.write(fileName + ",\n");
+          stream.write(`${fileName},\n`);
         });
         stream.write("};");
         stream.end();

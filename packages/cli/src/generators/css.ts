@@ -24,7 +24,7 @@ export default function(options: object | any, generatorBar: SingleBar) {
       if (file.startsWith(".")) {
         file = Path.join("../", srcDir, file);
       }
-      stream.write("import '" + file + "'\n");
+      stream.write(`import ${file} \n`);
     });
     stream.end();
   });

@@ -23,17 +23,12 @@ export default function(options: object | any, generatorBar: SingleBar | null) {
 
   stream.once("open", () => {
     stream.write("export default Vue => {\n");
-    glob(layoutsFolder + "*.vue", {}, (_, files: string[]) => {
+    glob(`${layoutsFolder}*.vue`, {}, (_, files: string[]) => {
       files.forEach((file: string) => {
         const fileName = Path.basename(file, ".vue");
 
         stream.write(
-          "Vue.component('" +
-            fileName +
-            "-layout', require('" +
-            layoutsFolderPrefix +
-            fileName +
-            ".vue'));\n"
+          `Vue.component('${fileName}-layout', require('${layoutsFolderPrefix}${fileName}.vue'));\n`
         );
       });
       stream.write("};");

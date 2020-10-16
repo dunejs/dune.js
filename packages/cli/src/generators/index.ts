@@ -13,10 +13,9 @@ import generateApp from "./app";
 
 export default function(options: object) {
   const generatorBar = new cliProgress.SingleBar({
-    format:
-      "Generation in progress... |" +
-      chalk.red("{bar}") +
-      "| {percentage}% || {value}/{total}",
+    format: `Generation in progress... | ${chalk.red(
+      "{bar}"
+    )} | {percentage}% | {value}/{total}`,
     barCompleteChar: "\u2588",
     barIncompleteChar: "\u2591",
     hideCursor: true,

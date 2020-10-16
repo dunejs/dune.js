@@ -3,7 +3,7 @@ import * as Path from "path";
 
 import { SingleBar } from "cli-progress";
 
-export default function (options: object | any, generatorBar: SingleBar) {
+export default function(options: object | any, generatorBar: SingleBar) {
   const configPath = options.config || "./";
   const config = require(Path.join(
     process.cwd(),
@@ -23,15 +23,13 @@ export default function (options: object | any, generatorBar: SingleBar) {
       if (file.startsWith(".")) {
         file = Path.join("../", srcDir, file);
       }
-      stream.write(
-        "import " + Path.basename(file, ".js") + " from'" + file + "'\n"
-      );
+      stream.write(`import ${Path.basename(file, ".js")} from '${file}'\n`);
     });
     stream.write("export default Vue => {\n");
     plugins.forEach((file: string) => {
       const fileName = Path.basename(file, ".js");
 
-      stream.write(fileName + "(Vue)\n");
+      stream.write(`${fileName}(Vue)\n`);
     });
     stream.write("};");
     stream.end();
