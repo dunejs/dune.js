@@ -4,7 +4,7 @@ const consola = require("consola");
 
 import { SingleBar } from "cli-progress";
 
-export default function (options: object | any, generatorBar: SingleBar) {
+export default (options: object | any, generatorBar: SingleBar) => {
   const configPath = options.config || "./";
 
   const configFile = Path.join(process.cwd(), configPath, "./dune.config.js");
@@ -16,4 +16,4 @@ export default function (options: object | any, generatorBar: SingleBar) {
     }
   });
   generatorBar.increment();
-}
+};

@@ -3,7 +3,7 @@ import * as Path from "path";
 
 import { SingleBar } from "cli-progress";
 
-export default function(generatorBar: SingleBar) {
+export default (generatorBar: SingleBar) => {
   const generatedFolder = Path.join(process.cwd(), ".dunejs/app");
 
   if (!fs.existsSync(generatedFolder)) {
@@ -11,4 +11,4 @@ export default function(generatorBar: SingleBar) {
   }
 
   generatorBar.increment();
-}
+};

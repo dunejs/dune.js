@@ -7,7 +7,7 @@ const httpHost = process.env.HOST || "localhost";
 const httpPort = process.env.PORT || 4000;
 const launchFile = Path.join(process.cwd(), "./dist");
 
-export default async function() {
+export default async () => {
   polka()
     .use(sirv(launchFile, { single: true }))
     .listen(httpPort, httpHost, (err: string) => {
@@ -16,4 +16,4 @@ export default async function() {
         `The server is running on http://${httpHost}:${httpPort}`
       );
     });
-}
+};

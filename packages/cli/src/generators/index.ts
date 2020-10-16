@@ -11,7 +11,7 @@ import generateCss from "./css";
 import generateStores from "./stores";
 import generateApp from "./app";
 
-export default function(options: object) {
+export default (options: object) => {
   const generatorBar = new cliProgress.SingleBar({
     format: `Generation in progress... | ${chalk.red(
       "{bar}"
@@ -33,4 +33,4 @@ export default function(options: object) {
   generateStores(options, generatorBar);
   generatorBar.stop();
   consola.success("Generation completed !");
-}
+};

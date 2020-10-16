@@ -6,7 +6,7 @@ import generateLayouts from "../generators/layouts";
 
 import { SingleBar } from "cli-progress";
 
-export default function(options: object | any, watcherBar: SingleBar) {
+export default (options: object | any, watcherBar: SingleBar) => {
   const config = require(Path.join(process.cwd(), ".dunejs/config"));
   const srcDir = config.srcDir || options.config || "./";
 
@@ -34,4 +34,4 @@ export default function(options: object | any, watcherBar: SingleBar) {
     .on("addDir", () => {
       onChange(options);
     });
-}
+};

@@ -4,7 +4,7 @@ import * as glob from "glob";
 
 import { SingleBar } from "cli-progress";
 
-export default function(options: object | any, generatorBar: SingleBar | null) {
+export default (options: object | any, generatorBar: SingleBar | null) => {
   const configPath = options.config || "./";
   const config = require(Path.join(
     process.cwd(),
@@ -39,4 +39,4 @@ export default function(options: object | any, generatorBar: SingleBar | null) {
   if (generatorBar !== null) {
     generatorBar.increment();
   }
-}
+};

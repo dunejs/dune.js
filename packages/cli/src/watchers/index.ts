@@ -6,7 +6,7 @@ import routesWatcher from "./routes";
 import layoutsWatcher from "./layouts";
 import storesWatcher from "./stores";
 
-export default function(options: object) {
+export default (options: object) => {
   const watcherBar = new cliProgress.SingleBar({
     format:
       "Watcher in progress... |" +
@@ -25,4 +25,4 @@ export default function(options: object) {
 
   watcherBar.stop();
   consola.success("Watcher initialized !");
-}
+};

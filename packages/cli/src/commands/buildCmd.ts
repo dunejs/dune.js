@@ -5,12 +5,12 @@ import * as Path from "path";
 
 const entryFiles = Path.join(process.cwd(), ".dunejs/app/index.html");
 
-export default async function(options: object) {
+export default async (options: object) => {
   generate(options);
 
   const bundlerOptions = {
-    sourceMaps: false,
     hmr: false,
+    sourceMaps: false,
   };
 
   const bundler = new Bundler(entryFiles, bundlerOptions);
@@ -24,4 +24,4 @@ export default async function(options: object) {
   });
 
   await bundler.bundle();
-}
+};

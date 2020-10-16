@@ -24,9 +24,9 @@ plugins(Vue);
 // Create Vue app
 const appOptions = {
   el: "#app",
+  render: (h) => h(App),
   router,
   store,
-  render: (h) => h(App),
 };
 
 const customApp = config.options || {};

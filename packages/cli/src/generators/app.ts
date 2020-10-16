@@ -4,7 +4,7 @@ const consola = require("consola");
 import { SingleBar } from "cli-progress";
 import { ncp } from "ncp";
 
-export default function(generateBar: SingleBar) {
+export default (generateBar: SingleBar) => {
   const dune = Path.join(
     Path.dirname(require.resolve("@dunejs/app/package.json")),
     "/src/"
@@ -18,4 +18,4 @@ export default function(generateBar: SingleBar) {
   });
 
   generateBar.increment();
-}
+};

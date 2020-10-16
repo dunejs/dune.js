@@ -3,7 +3,7 @@ import * as Path from "path";
 
 import { SingleBar } from "cli-progress";
 
-export default function(options: object | any, generatorBar: SingleBar) {
+export default (options: object | any, generatorBar: SingleBar) => {
   const configPath = options.config || "./";
   const config = require(Path.join(
     process.cwd(),
@@ -30,4 +30,4 @@ export default function(options: object | any, generatorBar: SingleBar) {
   });
 
   generatorBar.increment();
-}
+};

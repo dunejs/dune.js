@@ -4,10 +4,7 @@ import * as Path from "path";
 import { generateRoutes } from "vue-route-generator";
 import { SingleBar } from "cli-progress";
 
-export default function (
-  options: object | any,
-  generatorBar: SingleBar | null
-) {
+export default (options: object | any, generatorBar: SingleBar | null) => {
   const configPath = options.config || "./";
   const config = require(Path.join(
     process.cwd(),
@@ -30,4 +27,4 @@ export default function (
   if (generatorBar !== null) {
     generatorBar.increment();
   }
-}
+};

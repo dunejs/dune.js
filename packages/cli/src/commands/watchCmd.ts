@@ -7,7 +7,7 @@ import watcher from "../watchers/index";
 
 const entryFiles = Path.join(process.cwd(), ".dunejs/app/index.html");
 
-export default async function(options: object) {
+export default async (options: object) => {
   generate(options);
   watcher(options);
 
@@ -21,4 +21,4 @@ export default async function(options: object) {
   });
 
   await bundler.serve();
-}
+};
